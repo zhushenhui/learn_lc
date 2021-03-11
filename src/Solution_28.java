@@ -1,5 +1,5 @@
 // 28. 实现 strStr()
-class Solution {
+class Solution_28 {
     public static int strStr(String haystack, String needle) {
         // 如果子串长度为0返回0
         if (needle.length() == 0)
