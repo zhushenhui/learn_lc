@@ -5,7 +5,7 @@ import java.util.Map;
 
 //17. 电话号码的字母组合
 public class Solution_17 {
-    public static Map<Character, String> phhoneMap = new HashMap<Character, String>() {{
+    public static Map<Character, String> phoneMap = new HashMap<Character, String>() {{
         put('2', "abc");
         put('3', "def");
         put('4', "ghi");
@@ -28,7 +28,7 @@ public class Solution_17 {
            combinations.add(combination.toString());
        } else {
            // 拿到数字对应的字母集合
-           String letters = phhoneMap.get(digits.charAt(index));
+           String letters = phoneMap.get(digits.charAt(index));
             for (char letter : letters.toCharArray()) {
                 combination.append(letter);
                 backtrack(combinations, index + 1, digits, combination);
