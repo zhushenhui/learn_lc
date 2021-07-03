@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
  */
 public class Solution_451 {
     public static String frequencySort(String s) {
-        StringBuilder tempString = new StringBuilder();
         // tempMap中key为字符，value为出现次数
         Map<Character, Integer> tempMap = new HashMap();
         for(int i=0;i < s.length();i++) {
@@ -24,6 +23,8 @@ public class Solution_451 {
                 .stream()
                 .sorted((p1, p2) -> p2.getValue().compareTo(p1.getValue()))
                 .collect(Collectors.toList()).forEach(ele -> finalOut.put(ele.getKey(), ele.getValue()));
+        // 输入string
+        StringBuilder tempString = new StringBuilder();
         finalOut.forEach((key, value) -> {
             for (int i = 0; i < value; i++) {
                 tempString.append(key);
